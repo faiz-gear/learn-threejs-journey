@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  /* overflow: hidden; */
+  background-color: #1e1a20;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+#loading-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0);
+  transition: transform 0.3s;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+#loading-bar.ended {
+  transition: transform 1.5s;
+  transform-origin: top right;
+}
+.point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.point .label {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #00000077;
+  border: 1px solid #ffffff77;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 100;
+  font-size: 14px;
+  cursor: help;
+  transform: scale(0, 0);
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
+.point.visible .label {
+  transform: scale(1, 1);
+}
+
+.point .text {
+  position: absolute;
+  top: 30px;
+  left: -120px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #00000077;
+  border: 1px solid #ffffff77;
+  color: #fff;
+  line-height: 1.3em;
+  font-weight: 100;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.point:hover .text {
+  opacity: 1;
+}
