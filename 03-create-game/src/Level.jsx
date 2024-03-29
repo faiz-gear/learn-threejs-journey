@@ -30,7 +30,7 @@ export const BlockStart = ({ position = [0, 0, 0] }) => {
 }
 
 export const BlockEnd = ({ position = [0, 0, 0] }) => {
-  const model = useGLTF('/model.gltf')
+  const model = useGLTF('/learn-threejs-journey/model.gltf')
   model.scene.traverse((object) => {
     if (object.isMesh) object.castShadow = true
   })
@@ -42,7 +42,7 @@ export const BlockEnd = ({ position = [0, 0, 0] }) => {
       </RigidBody>
 
       <Float>
-        <Text font="/bebas-neue-v9-latin-regular.woff" position={[0, 2.25, 2]} scale={1}>
+        <Text font="/learn-threejs-journey/bebas-neue-v9-latin-regular.woff" position={[0, 2.25, 2]} scale={1}>
           Ending
           <meshBasicMaterial toneMapped={true} color={'white'} />
         </Text>

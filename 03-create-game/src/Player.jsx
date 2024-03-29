@@ -9,7 +9,7 @@ const cameraPosition = new THREE.Vector3()
 const cameraTarget = new THREE.Vector3()
 
 const Player = memo(() => {
-  const ball = useGLTF('/ball.gltf')
+  const ball = useGLTF('/learn-threejs-journey/ball.gltf')
 
   const ballRigidBodyRef = useRef(null)
   const [subscribeKeys, getKeys] = useKeyboardControls()
