@@ -21,7 +21,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
-
+      
     strategy:
       matrix:
         node-version: [18.x]
@@ -39,6 +39,7 @@ jobs:
     - run: npm install pnpm -g
     - run: pnpm config set registry https://registry.npmmirror.com
     - run: pnpm install
+      working-directory: './03-create-game'
     - run: pnpm build
       working-directory: './03-create-game'
     - name: Upload artifact
